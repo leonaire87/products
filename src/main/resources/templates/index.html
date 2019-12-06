@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <title>Catalog</title>
+</head>
+<body>
+    <h1>Test</h1>
+
+    <table>
+        <thead>
+             <tr>
+                 <td>Name</td>
+                 <td>Price</td>
+            </tr>
+        </thead>
+        <tbody>
+        <!-- gebruik maken van thymeleaf door th, we gaan voor elk product iets doen(overlopen)
+        door all vanuit de controller aanspreken -->
+             <tr th:each="product : ${all}">
+                 <td th:text="${product.name}"></td>
+                 <td th:text="${product.price}"></td>
+
+             </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
